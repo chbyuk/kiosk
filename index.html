@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로형 메뉴판</title>
+    <style>
+        /* 전체적인 스타일 초기화 및 배경 설정 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+            background-color: #f4f4f4; /* 전체 배경색 */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 메뉴판 전체를 감싸는 컨테이너 */
+        .menu-board {
+            width: 100%;
+            max-width: 480px; /* 키오스크 화면 너비에 맞게 조절 */
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 메뉴판 헤더 (제목) */
+        .menu-header {
+            padding: 25px 20px;
+            background-color: #333; /* 헤더 배경색 */
+            color: #ffffff; /* 헤더 글자색 */
+            text-align: center;
+        }
+
+        .menu-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        /* 메뉴 아이템들을 담는 리스트 */
+        .menu-list {
+            padding: 15px;
+        }
+
+        /* 개별 메뉴 아이템 카드 */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            overflow: hidden; /* 이미지의 둥근 모서리 처리를 위해 */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.03); /* 마우스 올렸을 때 약간 커지는 효과 */
+        }
+
+        /* 메뉴 이미지 */
+        .menu-item-image {
+            width: 140px;
+            height: 140px;
+            object-fit: cover; /* 이미지가 비율을 유지하며 꽉 차게 */
+        }
+
+        /* 메뉴 텍스트 정보 (이름, 설명, 가격) */
+        .menu-item-info {
+            padding: 20px;
+            flex-grow: 1; /* 남은 공간을 모두 차지 */
+        }
+
+        .menu-item-info h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.4em;
+            color: #333;
+        }
+
+        .menu-item-info p {
+            margin: 0 0 12px 0;
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* 메뉴 가격 */
+        .menu-item-price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #d9534f; /* 가격 색상 */
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-board">
+        <header class="menu-header">
+            <h1>OUR MENU</h1>
+        </header>
+
+        <div class="menu-list">
+            <!-- 메뉴 아이템 1 -->
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/140x140/E8D6C4/000000?text=Coffee" alt="아메리카노" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>아메리카노</h3>
+                    <p>깊고 진한 풍미의 에스프레소 샷</p>
+                    <div class="menu-item-price">₩4,500</div>
+                </div>
+            </div>
+
+            <!-- 메뉴 아이템 2 -->
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/140x140/C8B5A6/000000?text=Latte" alt="카페라떼" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>카페라떼</h3>
+                    <p>부드러운 우유와 에스프레소의 조화</p>
+                    <div class="menu-item-price">₩5,000</div>
+                </div>
+            </div>
+
+            <!-- 메뉴 아이템 3 -->
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/140x140/A98B7F/FFFFFF?text=Ade" alt="자몽에이드" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>자몽에이드</h3>
+                    <p>상큼한 생자몽이 들어간 시원한 에이드</p>
+                    <div class="menu-item-price">₩6,000</div>
+                </div>
+            </div>
+
+            <!-- 메뉴 아이템 4 -->
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/140x140/D7C4B8/000000?text=Tea" alt="얼그레이 티" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>얼그레이 티</h3>
+                    <p>베르가못 향이 매력적인 홍차</p>
+                    <div class="menu-item-price">₩4,800</div>
+                </div>
+            </div>
+
+            <!-- 메뉴 아이템 5 -->
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/140x140/BFAFA2/FFFFFF?text=Smoothie" alt="딸기 스무디" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>딸기 스무디</h3>
+                    <p>신선한 딸기를 그대로 갈아 만든 스무디</p>
+                    <div class="menu-item-price">₩6,500</div>
+                </div>
+            </div>
+            
+             <!-- 여기에 새로운 메뉴 아이템을 추가할 수 있습니다. -->
+
+        </div>
+    </div>
+
+</body>
+</html>
