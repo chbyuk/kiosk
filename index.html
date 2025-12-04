@@ -31,19 +31,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
         }
 
         .menu-header h1 {
             margin: 0;
             font-size: 2.5em;
             font-weight: bold;
+            flex-grow: 1; /* 제목이 공간을 차지하도록 설정 */
+            text-align: center; /* 제목을 중앙 정렬 */
+            margin-left: 140px; /* 버튼 공간 확보를 위한 마진 */
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px; /* 버튼 사이 간격 */
         }
 
         .cart-button {
-            position: absolute;
-            right: 20px;
             background-color: #d9534f;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .video-button {
+            background-color: #5bc0de; /* 동영상 버튼 색상 */
             color: white;
             padding: 10px 15px;
             border-radius: 5px;
@@ -147,7 +161,10 @@
     <div class="menu-board">
         <header class="menu-header">
             <h1>OUR MENU</h1>
-            <a href="cart.html" class="cart-button">장바구니</a>
+            <div class="header-buttons">
+                <a href="video.html" class="video-button">동영상 보기</a>
+                <a href="cart.html" class="cart-button">장바구니</a>
+            </div>
         </header>
 
         <div class="menu-list">
